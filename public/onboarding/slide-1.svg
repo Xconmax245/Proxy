@@ -1,0 +1,62 @@
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Dark background -->
+  <rect width="360" height="260" fill="#070d1a" rx="12"/>
+
+  <!-- Grid lines -->
+  <line x1="0" y1="65" x2="360" y2="65" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="0" y1="130" x2="360" y2="130" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="0" y1="195" x2="360" y2="195" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="90" y1="0" x2="90" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="180" y1="0" x2="180" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="270" y1="0" x2="270" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- Glow blob behind center -->
+  <ellipse cx="180" cy="130" rx="90" ry="60" fill="#c8ff00" opacity="0.04"/>
+
+  <!-- Delegator card (left) -->
+  <rect x="28" y="80" width="108" height="100" rx="10" fill="#0d1629" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="28" y="80" width="108" height="28" rx="10" fill="#112240"/>
+  <rect x="28" y="98" width="108" height="10" rx="0" fill="#112240"/>
+  <circle cx="48" cy="94" r="8" fill="#1a3a6b"/>
+  <circle cx="48" cy="94" r="4" fill="#3b82f6" opacity="0.8"/>
+  <text x="62" y="91" font-family="monospace" font-size="7.5" fill="#94a3b8">delegator</text>
+  <text x="62" y="102" font-family="monospace" font-size="8.5" fill="#ffffff" font-weight="700">alice.sui</text>
+  <!-- Address -->
+  <rect x="38" y="116" width="88" height="14" rx="4" fill="#0a1628"/>
+  <text x="82" y="126" font-family="monospace" font-size="6.5" fill="#475569" text-anchor="middle">0x4a11...a724</text>
+  <!-- Balance -->
+  <text x="38" y="148" font-family="monospace" font-size="7" fill="#64748b">Balance</text>
+  <text x="38" y="162" font-family="monospace" font-size="11" fill="#c8ff00" font-weight="700">12,450 SUI</text>
+
+  <!-- Arrow between cards -->
+  <line x1="140" y1="130" x2="218" y2="130" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="218,130 210,126 210,134" fill="#3b82f6"/>
+  <!-- Arrow label -->
+  <rect x="148" y="118" width="64" height="14" rx="3" fill="#0a1628"/>
+  <text x="180" y="128" font-family="monospace" font-size="6.5" fill="#3b82f6" text-anchor="middle">delegate →</text>
+
+  <!-- Delegation object card (right) -->
+  <rect x="224" y="68" width="110" height="124" rx="10" fill="#0d1629" stroke="#c8ff00" stroke-width="1.2"/>
+  <!-- Top bar -->
+  <rect x="224" y="68" width="110" height="28" rx="10" fill="#121e0a"/>
+  <rect x="224" y="86" width="110" height="10" rx="0" fill="#121e0a"/>
+  <!-- Sealed badge -->
+  <rect x="234" y="74" width="50" height="14" rx="4" fill="#c8ff00" opacity="0.15"/>
+  <circle cx="241" cy="81" r="3" fill="#c8ff00"/>
+  <text x="247" y="84" font-family="monospace" font-size="7" fill="#c8ff00">SEALED</text>
+  <!-- Constraints -->
+  <text x="234" y="112" font-family="monospace" font-size="7" fill="#64748b">Limit</text>
+  <text x="234" y="124" font-family="monospace" font-size="9.5" fill="#c8ff00" font-weight="700">500 SUI</text>
+  <text x="234" y="138" font-family="monospace" font-size="7" fill="#64748b">Expires</text>
+  <text x="234" y="150" font-family="monospace" font-size="8.5" fill="#e2e8f0" font-weight="600">30 days</text>
+  <text x="234" y="164" font-family="monospace" font-size="7" fill="#64748b">Type</text>
+  <text x="234" y="176" font-family="monospace" font-size="8" fill="#3b82f6" font-weight="600">FINANCIAL</text>
+
+  <!-- On-chain footer bar -->
+  <rect x="40" y="208" width="280" height="20" rx="6" fill="#0a1628" stroke="#1e293b" stroke-width="0.8"/>
+  <circle cx="56" cy="218" r="4" fill="#c8ff00" opacity="0.9"/>
+  <text x="66" y="222" font-family="monospace" font-size="7" fill="#64748b">sealed on-chain</text>
+  <text x="210" y="222" font-family="monospace" font-size="7" fill="#475569" text-anchor="end">epoch 1126</text>
+  <rect x="214" y="212" width="1" height="12" fill="#1e293b"/>
+  <text x="320" y="222" font-family="monospace" font-size="7" fill="#3b82f6" text-anchor="end">Sui</text>
+</svg>

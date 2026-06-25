@@ -1,0 +1,60 @@
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Dark background -->
+  <rect width="360" height="260" fill="#070d1a" rx="12"/>
+
+  <!-- Grid lines -->
+  <line x1="0" y1="65" x2="360" y2="65" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="0" y1="130" x2="360" y2="130" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="0" y1="195" x2="360" y2="195" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="90" y1="0" x2="90" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="180" y1="0" x2="180" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="270" y1="0" x2="270" y2="260" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- Glow blob, lime for verified state -->
+  <ellipse cx="290" cy="118" rx="55" ry="40" fill="#c8ff00" opacity="0.05"/>
+
+  <!-- Node 1: Alice (delegator) -->
+  <circle cx="62" cy="118" r="34" fill="#0d1629" stroke="#3b82f6" stroke-width="1.4"/>
+  <circle cx="62" cy="104" r="10" fill="#112240" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="62" cy="104" r="5" fill="#3b82f6" opacity="0.7"/>
+  <text x="62" y="128" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">delegator</text>
+  <text x="62" y="140" font-family="monospace" font-size="9" fill="#ffffff" font-weight="700" text-anchor="middle">alice.sui</text>
+
+  <!-- Arrow alice → verify -->
+  <line x1="98" y1="118" x2="148" y2="118" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="148,118 140,114 140,122" fill="#3b82f6"/>
+  <rect x="104" y="106" width="38" height="12" rx="3" fill="#0a1628"/>
+  <text x="123" y="115" font-family="monospace" font-size="6" fill="#3b82f6" text-anchor="middle">authority</text>
+
+  <!-- Node 2: is_authorized() call -->
+  <rect x="150" y="86" width="60" height="64" rx="8" fill="#0d1629" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="150" y="86" width="60" height="18" rx="8" fill="#112240"/>
+  <rect x="150" y="95" width="60" height="9" rx="0" fill="#112240"/>
+  <text x="180" y="97" font-family="monospace" font-size="6" fill="#64748b" text-anchor="middle">function</text>
+  <text x="180" y="112" font-family="monospace" font-size="7.5" fill="#3b82f6" font-weight="700" text-anchor="middle">is_auth()</text>
+  <text x="180" y="126" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">on-chain</text>
+  <text x="180" y="140" font-family="monospace" font-size="8" fill="#c8ff00" font-weight="700" text-anchor="middle">→ true</text>
+
+  <!-- Arrow verify → protocol -->
+  <line x1="212" y1="118" x2="252" y2="118" stroke="#c8ff00" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="252,118 244,114 244,122" fill="#c8ff00"/>
+  <rect x="214" y="106" width="38" height="12" rx="3" fill="#0a1628"/>
+  <text x="233" y="115" font-family="monospace" font-size="6" fill="#c8ff00" text-anchor="middle">verified</text>
+
+  <!-- Node 3: Protocol (verified) -->
+  <circle cx="290" cy="118" rx="34" ry="34" fill="#0d1629" stroke="#c8ff00" stroke-width="1.8"/>
+  <circle cx="290" cy="118" r="34" fill="#0d1629" stroke="#c8ff00" stroke-width="1.8"/>
+  <!-- Big checkmark -->
+  <path d="M274 118 l10 11 l18-22" stroke="#c8ff00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="290" y="142" font-family="monospace" font-size="7" fill="#c8ff00" text-anchor="middle">protocol</text>
+
+  <!-- Bottom labels -->
+  <text x="62" y="168" font-family="monospace" font-size="6.5" fill="#475569" text-anchor="middle">DELEGATOR</text>
+  <text x="290" y="168" font-family="monospace" font-size="6.5" fill="#c8ff00" text-anchor="middle">VERIFIED ✓</text>
+
+  <!-- Footer bar -->
+  <rect x="30" y="210" width="300" height="20" rx="6" fill="#0a1628" stroke="#1e293b" stroke-width="0.8"/>
+  <circle cx="46" cy="220" r="4" fill="#c8ff00" opacity="0.9"/>
+  <text x="56" y="224" font-family="monospace" font-size="7" fill="#64748b">no intermediary · single function call</text>
+  <text x="320" y="224" font-family="monospace" font-size="7" fill="#c8ff00" text-anchor="end">Move</text>
+</svg>
