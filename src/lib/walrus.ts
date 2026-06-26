@@ -1,8 +1,11 @@
-const PUBLISHER = process.env.NEXT_PUBLIC_WALRUS_PUBLISHER_URL;
-const AGGREGATOR = process.env.NEXT_PUBLIC_WALRUS_AGGREGATOR_URL;
+const PUBLISHER =
+  process.env.NEXT_PUBLIC_WALRUS_PUBLISHER_URL ||
+  "https://publisher.walrus-testnet.walrus.space";
+const AGGREGATOR =
+  process.env.NEXT_PUBLIC_WALRUS_AGGREGATOR_URL ||
+  "https://aggregator.walrus-testnet.walrus.space";
 
 export async function uploadToWalrus(file: File, epochs = 50): Promise<string> {
-  if (!PUBLISHER) throw new Error("NEXT_PUBLIC_WALRUS_PUBLISHER_URL is not set");
   const buffer = await file.arrayBuffer();
   try {
     // Walrus testnet publisher endpoint: PUT /v1/blobs
@@ -34,7 +37,6 @@ export async function uploadToWalrus(file: File, epochs = 50): Promise<string> {
 }
 
 export async function fetchFromWalrus(blobId: string): Promise<Blob> {
-  if (!AGGREGATOR) throw new Error("NEXT_PUBLIC_WALRUS_AGGREGATOR_URL is not set");
   // Walrus testnet aggregator endpoint: GET /v1/blobs/:blobId
   const response = await fetch(`${AGGREGATOR}/v1/blobs/${blobId}`);
   if (!response.ok) {
@@ -48,6 +50,5 @@ export function getWalrusScanUrl(blobId: string): string {
 }
 
 export function getWalrusAggregatorUrl(blobId: string): string {
-  if (!AGGREGATOR) return "";
   return `${AGGREGATOR}/v1/blobs/${blobId}`;
 }
